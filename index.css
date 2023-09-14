@@ -1,0 +1,360 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+
+.header-scrolled {
+  background-color: black;
+}
+
+.missions .mission-item {
+  padding: 50px 30px;
+  transition: all ease-in-out 0.4s;
+  background: #161718;
+
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.missions .mission-item:before {
+  content: "";
+  position: absolute;
+  background: #1d1f20;
+  top: -200px;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.missions .mission-item i {
+  background: #27a776;
+  color: #fff;
+  font-size: 24px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.missions .mission-item h4 {
+  font-weight: 600;
+  margin: 15px 0 0 0;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.missions .mission-item h4 a {
+  color: #fff;
+}
+
+.missions .mission-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin: 15px 0 0 0;
+}
+
+.missions .mission-item:hover:before {
+  background: #27a776;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.missions .mission-item:hover h4 a,
+.missions .mission-item:hover p {
+  color: #fff;
+}
+
+.missions .mission-item:hover i {
+  background: #fff;
+  color: #27a776;
+}
+
+/* impact section */
+.impact {
+  padding-bottom: 0;
+}
+
+.impact .img-bg {
+  min-height: 500px;
+  background-size: cover;
+}
+
+.impact .slides {
+  background-color: #f7f9fc;
+}
+
+.impact h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b2f45;
+}
+
+.impact h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #29486a;
+}
+
+.impact .swiper {
+  margin: 140px 140px 120px 140px;
+  overflow: hidden;
+}
+
+.impact .swiper-button-prev:after,
+.impact .swiper-button-next:after {
+  font-size: 24px;
+  color: #1b2f45;
+}
+
+.impact .swiper-button-prev {
+  left: 80px;
+}
+
+.impact .swiper-button-next {
+  right: 80px;
+}
+
+.impact .swiper-pagination {
+  margin-top: 30px;
+  position: relative;
+}
+
+.impact .swiper-pagination .swiper-pagination-bullet {
+  background-color: #1b2f45;
+}
+
+.impact .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #56b8e6;
+}
+
+@media (max-width: 1200px) {
+  .impact .swiper {
+    margin: 60px 60px 40px 60px;
+  }
+
+  .impact .swiper-button-prev,
+  .impact .swiper-button-next {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .impact .swiper {
+    margin: 40px 40px 20px 40px;
+  }
+}
+
+.page-about .impact {
+  padding: 0 0 80px 0;
+}
+
+.country #country-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.country #country-flters li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  color: #444444;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #fff;
+}
+
+.country #country-flters li:hover,
+.country #country-flters li.filter-active {
+  color: #f3a200;
+  border-color: #ffb727;
+}
+
+.country .country-item {
+  margin-bottom: 30px;
+}
+
+.country .country-item .country-img {
+  overflow: hidden;
+}
+
+.country .country-item .country-img img {
+  transition: all 0.8s ease-in-out;
+}
+
+.country .country-item .country-info {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  z-index: 3;
+  right: 15px;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+}
+
+.country .country-item .country-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.country .country-item .country-info p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.country .country-item .country-info .preview-link,
+.country .country-item .country-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.country .country-item .country-info .preview-link:hover,
+.country .country-item .country-info .details-link:hover {
+  color: #ffc041;
+}
+
+.country .country-item .country-info .details-link {
+  right: 10px;
+}
+
+.country .country-item:hover .country-img img {
+  transform: scale(1.2);
+}
+
+.country .country-item:hover .country-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Services Cards Section
+--------------------------------------------------------------*/
+.venues {
+  background: #f7f9fc;
+}
+
+.venues .card-item {
+  border: 1px solid rgba(27, 47, 69, 0.1);
+  background: #fff;
+  position: relative;
+  border-radius: 0;
+}
+
+.venues .card-item .card-bg {
+  min-height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.venues .card-item .card-body {
+  padding: 30px;
+}
+
+.venues .card-item h4 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--color-secondary);
+}
+
+.venues .card-item p {
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* FOOTER */
+#footer {
+  background: white;
+  background-size: cover;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#footer .container {
+  position: relative;
+}
+
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  font-family: "Satisfy", serif;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+#footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+#footer .social-links {
+  margin: 0 0 40px 0;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #ffb727;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #f3a200;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .copyright {
+  margin: 0 0 5px 0;
+}
+
+#footer .credits {
+  font-size: 13px;
+}
